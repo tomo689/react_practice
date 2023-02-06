@@ -1,0 +1,58 @@
+[{
+  "data": {
+    "id": "n01",
+    "type": "companyA",
+    "label": "companyA"
+  },
+  "classes": "company"
+}, {
+  "data": {
+    "id": "n02",
+    "type": "companyB",
+    "label": "companyB"
+  },
+  "classes": "company"
+},{
+  "data": {
+    "id": "n03",
+    "type": "companyC"
+  },
+  "classes": "company"
+}, {
+  "data": {
+    "id": "n04",
+    "type": "companyC"
+  },
+  "classes": "company"
+},{
+  "data": {
+    "id": "n05",
+    "type": "companyC"
+  },
+  "classes": "company"
+},{
+  "data": {
+    "id": "c01",
+    "parent": "n01",
+    "type": "segmantA"
+  },
+  "classes": "segment"
+}, {
+  "data": {
+    "id": "c02",
+    "parent": "n01",
+    "type": "segmentB",
+    "label":"segmentB"
+  },
+  "classes": "segment"
+}, {
+  "data": {
+    "source": "n01",
+    "target": "n02"
+  }
+}, {
+  "data": {
+    "source": "n02",
+    "target": "n03"
+  }
+}]

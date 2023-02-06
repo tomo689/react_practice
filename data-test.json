@@ -1,0 +1,56 @@
+[{
+    "data": {
+      "id": "n01",
+      "type": "companyA"
+    },
+    "classes": "company"
+  }, {
+    "data": {
+      "id": "n02",
+      "type": "companyB"
+    },
+    "classes": "company"
+  },{
+    "data": {
+      "id": "n03",
+      "type": "companyC"
+    },
+    "classes": "company"
+  }, {
+    "data": {
+      "id": "n04",
+      "type": "companyC"
+    },
+    "classes": "company"
+  },{
+    "data": {
+      "id": "n05",
+      "type": "companyC"
+    },
+    "classes": "company"
+  },{
+    "data": {
+      "source": "n01",
+      "target": "n02"
+    }
+  }, {
+    "data": {
+      "source": "n02",
+      "target": "n03"
+    }
+  }, {
+    "data": {
+      "source": "n03",
+      "target": "n04"
+    }
+  }, {
+    "data": {
+      "source": "n04",
+      "target": "n05"
+    }
+  }, {
+    "data": {
+      "source": "n01",
+      "target": "n05"
+    }
+  }]

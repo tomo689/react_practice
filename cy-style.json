@@ -1,0 +1,40 @@
+[{
+    "selector": "node",
+    "style": {
+      "text-valign": "center",
+      "text-halign": "left",
+      "background-color": "#4682b4"
+    }
+  }, {
+    "selector": "node.company",
+    "style": {
+      "shape": "rectangle",
+      "text-valign": "center",
+      "text-halign": "left",
+      "background-cover": "fit",
+      "background-picture": "./public/static/favicon.ico"
+    }
+  },{
+    "selector": "node.segment",
+    "style": {
+      "text-valign": "center",
+      "text-halign": "left",
+      "background-color": "white"
+    }
+  }, {
+    "selector": "edge",
+    "style": {
+      "width": 3
+    }
+  }, {
+    "selector": "node[type]",
+    "style": {
+      "label": "data(type)"
+    }
+  }, {
+    "selector": "label",
+    "style": {
+      "color": "white"
+    }
+  }
+]
