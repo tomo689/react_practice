@@ -38,7 +38,7 @@ const MediaControlCard = (props: PropsOptional) => {
   }, [picked])
 
   useMemo(() => {
-    const filePath = '/static/images/image' + picked.slice(-1) +'.jpg';
+    const filePath = '/static/images/image' + picked +'.jpg';
     setImage(filePath);
   }, [picked])
   

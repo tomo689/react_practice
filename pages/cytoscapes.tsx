@@ -25,14 +25,14 @@ function Apps() {
     cy.ready(function(){
       cy.add([
         { group: 'nodes', data: { id: 'companyA' }, position: { x: 450, y: 400 }, style:{type: "トヨタ"} },
-        { group: 'nodes', data: { id: 'comapnyB' }, position: { x: 200, y: 200 }, style:{type: "テスラ"} },
-        { group: 'edges', data: { id: 'e0', source: 'companyA', target: 'comapnyB' } },
-        { group: 'nodes', data: { id: 'comapnyC' }, position: { x: 200, y: 600 }, style:{type: "ホンダ"} },
-        { group: 'edges', data: { id: 'e1', source: 'companyA', target: 'comapnyC' } },
-        { group: 'nodes', data: { id: 'comapnyD' }, position: { x: 700, y: 200 }, style:{type: "BMW"} },
-        { group: 'edges', data: { id: 'e2', source: 'companyA', target: 'comapnyD' } },
-        { group: 'nodes', data: { id: 'comapnyE' }, position: { x: 700, y: 600 }, style:{type: "日産"} },
-        { group: 'edges', data: { id: 'e3', source: 'companyA', target: 'comapnyE' } }
+        { group: 'nodes', data: { id: 'companyB' }, position: { x: 200, y: 200 }, style:{type: "テスラ"} },
+        { group: 'edges', data: { id: 'e0', source: 'companyA', target: 'companyB' } },
+        { group: 'nodes', data: { id: 'companyC' }, position: { x: 200, y: 600 }, style:{type: "ホンダ"} },
+        { group: 'edges', data: { id: 'e1', source: 'companyA', target: 'companyC' } },
+        { group: 'nodes', data: { id: 'companyD' }, position: { x: 700, y: 200 }, style:{type: "BMW"} },
+        { group: 'edges', data: { id: 'e2', source: 'companyA', target: 'companyD' } },
+        { group: 'nodes', data: { id: 'companyE' }, position: { x: 700, y: 600 }, style:{type: "日産"} },
+        { group: 'edges', data: { id: 'e3', source: 'companyA', target: 'companyE' } }
       ]);
 
       cy.on('tap', 'ndoes', function(evt){

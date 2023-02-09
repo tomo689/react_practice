@@ -6,25 +6,25 @@
         "segment":"B",
         "reputation":[2,1,5,3]
       },
-      "comapnyB": {
+      "companyB": {
         "name":"テスラ", 
         "strong":"先進的なデザインの自動運転ソフトウェア搭載の電気自動車",
         "segment":"B",
         "reputation":[1,1,5,5]
       },
-      "comapnyC": {
+      "companyC": {
         "name":"トヨタ", 
         "strong":"トヨタ式などで知られる安全管理と生産プロセス",
         "segment":"A",
         "reputation":[3,3,1,2]
       },
-      "comapnyD": {
+      "companyD": {
         "name":"日産", 
         "strong":"電気自動車",
         "segment":"A",
         "reputation":[3,1,2,2]
       },
-      "comapnyE": {
+      "companyE": {
         "name":"ダイハツ", 
         "strong":"価格の安い軽自動車",
         "segment":"C", 
