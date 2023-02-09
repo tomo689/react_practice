@@ -99,12 +99,8 @@ export default function Value() {
             </>
           ) : (
             <div style={{marginTop:'100px'}}>
-              <h2>「{want}」</h2>
-              <h2>ために、</h2>
-              <h2> .</h2>
-              <h2>「{can}」</h2>
-              <h2>を活かして、</h2>
-              <h2> .</h2>
+              <h2>「{want}」ために、</h2>
+              <h2>「{can}」を活かして、</h2>
               <h2>「{should}」</h2>
             </div>
           )}
@@ -139,16 +135,16 @@ export default function Value() {
                 variant="filled"
                 sx={{backgroundColor: "white", m:2, width:'70ch'}}
               />
-              <TextField
+              {/* <TextField
                 label="それは同じ目的の他のソリューションと何が違いますか？"
                 multiline
                 minRows="2"
                 maxRows="3"
                 variant="filled"
                 sx={{backgroundColor: "white", m:2, width:'70ch'}}
-              />
-                <Button sx={{color:'pink', height: '50px', zIndex:10, variant: 'outlined', size: 'large'}} onClick={(e) => {sendDataOther()}}>決定</Button>
+              /> */}
             </div>
+              <Button sx={{color:'pink', height: '50px', zIndex:10, variant: 'outlined', size: 'large'}} onClick={(e) => {sendDataOther()}}>決定</Button>
             </>
           ):(
             <>
@@ -165,7 +161,3 @@ export default function Value() {
     </>
   )
 }
-
-//この辺のinputをうまく捌いてラベルとかに入れたいよね
-// DBチェック　→ （データあり）表示の感じで行く
-// なければ入れるモードで　

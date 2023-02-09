@@ -1,56 +1,47 @@
 [{
-    "data": {
-      "id": "n01",
-      "type": "companyA"
-    },
-    "classes": "company"
-  }, {
-    "data": {
-      "id": "n02",
-      "type": "companyB"
-    },
-    "classes": "company"
-  },{
-    "data": {
-      "id": "n03",
-      "type": "companyC"
-    },
-    "classes": "company"
-  }, {
-    "data": {
-      "id": "n04",
-      "type": "companyC"
-    },
-    "classes": "company"
-  },{
-    "data": {
-      "id": "n05",
-      "type": "companyC"
-    },
-    "classes": "company"
-  },{
-    "data": {
-      "source": "n01",
-      "target": "n02"
+    "company": {
+      "companyA": {
+        "name":"自社", 
+        "strong":"自動運転の電気自動車",
+        "segment":"B",
+        "reputation":[2,1,5,3]
+      },
+      "comapnyB": {
+        "name":"テスラ", 
+        "strong":"先進的なデザインの自動運転ソフトウェア搭載の電気自動車",
+        "segment":"B",
+        "reputation":[1,1,5,5]
+      },
+      "comapnyC": {
+        "name":"トヨタ", 
+        "strong":"トヨタ式などで知られる安全管理と生産プロセス",
+        "segment":"A",
+        "reputation":[3,3,1,2]
+      },
+      "comapnyD": {
+        "name":"日産", 
+        "strong":"電気自動車",
+        "segment":"A",
+        "reputation":[3,1,2,2]
+      },
+      "comapnyE": {
+        "name":"ダイハツ", 
+        "strong":"価格の安い軽自動車",
+        "segment":"C", 
+        "reputation":[3,3,1,1]
+      }
     }
   }, {
-    "data": {
-      "source": "n02",
-      "target": "n03"
+    "segmentation": {
+      "A":{
+        "description": "平均価格の安定した古くからあるものが好きな人"
+      },
+      "B":{
+        "description": "新しいテクノロジーの近未来的な乗り物が好きな人"
+      },
+      "C":{
+        "description": "安くて実用的で使いやすいものが好きな人"
+      }
     }
-  }, {
-    "data": {
-      "source": "n03",
-      "target": "n04"
-    }
-  }, {
-    "data": {
-      "source": "n04",
-      "target": "n05"
-    }
-  }, {
-    "data": {
-      "source": "n01",
-      "target": "n05"
-    }
-  }]
+  }
+]

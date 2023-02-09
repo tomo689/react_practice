@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useEffect, useState} from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -6,34 +6,53 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import jsonReader from './api/jsonHandler';
+
+export type Table = {
+  name: string,
+  design: number,
+  technology: number,
+  safety: number,
+  price: number,
+}
 
 function createData(
   name: string,
-  calories: number,
-  fat: number,
-  carbs: number,
+  design: number,
+  technology: number,
+  safety: number,
+  price: number,
 ) {
-  return { name, calories, fat, carbs };
+  return { name, design, technology, safety, price };
 }
 
-const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24),
-  createData('Ice cream sandwich', 237, 9.0, 37),
-  createData('Eclair', 262, 16.0, 24),
-  createData('Cupcake', 305, 3.7, 67),
-  createData('Gingerbread', 356, 16.0, 49),
-];
-
 export default function DataTable() {
+  const [rows, setRows] = useState<Array<Table>>([]);
+
+  useEffect(() => {
+    const data = jsonReader()[0]['company'];
+    const companies = Object.keys(data);
+    const rows = companies.map((d) => createData(
+        data[d].name,
+        data[d].reputation[0],
+        data[d].reputation[1],
+        data[d].reputation[2],
+        data[d].reputation[3],
+      )
+    )
+    setRows(rows);
+  }, [])
+
   return (
     <TableContainer component={Paper} sx={{margin:"3ch", paddingRight:"3px"}}>
       <Table sx={{ minWidth: 600 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="center">Calories</TableCell>
-            <TableCell align="center">Fat&nbsp;(g)</TableCell>
-            <TableCell align="center">Carbs&nbsp;(g)</TableCell>
+            <TableCell></TableCell>
+            <TableCell align="center">デザイン</TableCell>
+            <TableCell align="center">安全性</TableCell>
+            <TableCell align="center">テクノロジー</TableCell>
+            <TableCell align="center">価格</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -45,9 +64,10 @@ export default function DataTable() {
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell align="center">{row.calories}</TableCell>
-              <TableCell align="center">{row.fat}</TableCell>
-              <TableCell align="center">{row.carbs}</TableCell>
+              <TableCell align="center">{row.design}</TableCell>
+              <TableCell align="center">{row.safety}</TableCell>
+              <TableCell align="center">{row.technology}</TableCell>
+              <TableCell align="center">{row.price}</TableCell>
             </TableRow>
           ))}
         </TableBody>
