@@ -1,7 +1,7 @@
 import { Button, TextField } from '@mui/material'
 import React, { useState } from 'react'
-import {Typography} from '@mui/material';
 import MediaControlCard from './cards';
+import ResponsiveAppBar from './AppBar';
 
 
 export default function Value() {
@@ -34,7 +34,8 @@ export default function Value() {
 
   // MyStageのUIを崩さないように字数制限などをつけることで対応
   return (
-    <>
+    <div style={{backgroundColor:'black'}}>
+      <ResponsiveAppBar/>
       <div style={{ textAlign:"center", marginBottom:'30px'}}>
         {!goalStage ? (
           <>
@@ -158,6 +159,6 @@ export default function Value() {
           )}
         </div>
       </div>
-    </>
+    </div>
   )
 }

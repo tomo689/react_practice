@@ -5,16 +5,8 @@ import { useState } from 'react'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Value from './value'
 
-// const inter = Inter({ subsets: ['latin'] })
-// 少しずつ下に下げる仕様だとSwiperが欲しいけど、今の実力だとうまくそれができない。
-// 仕方ないので画面の下に　> マークを入れて、useState　×　三項演算子で対応
-
-//const pageSet = createContext();
-
 export default function Home() {
-  //const page = useContext(pageSet);
   const [page, setPage] = useState<number>(0);
-  // 最初の自分軸と他人軸が完成かされているかどうかでもう一つuserStateいるかも
   return (
     <>
       <Head>
@@ -24,21 +16,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ResponsiveAppBar/>
-      { page === 0 ? 
+      { page === 1 ? 
         <Value/>:
-        page === 1 ?
+        page === 0 ?
         <Apps/>:
         page === 2 ?
         <></>:
         <></>
       }
-      <div style={{backgroundColor:"#1976d2", height:'60.5px', width: '100%', textAlign:'center'}}>
+      {/* <div style={{backgroundColor:"#1976d2", height:'60.5px', width: '100%', textAlign:'center'}}>
         <ArrowDropDownIcon sx={{fontSize:'90px'}} onClick={(() => setPage(page + 1))} />
-      </div>
+      </div> */}
     </>
   )
 }
-
-// 下にフッターとかつけたらuseStateを簡単につけれる？
-// App Barを解析して似たようなComponentを作って入れよう！
-// Divタグでもワンチャンいいかもやけど

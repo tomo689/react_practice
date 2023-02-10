@@ -79,8 +79,9 @@ const MediaControlCard = (props: PropsOptional) => {
           </Box>
         </>
       : 
-        <div style={{textAlign:'center',backgroundColor: "gray"}}>
-        </div>
+        <>
+        <h2 style={{color:'white', margin:'3ch', textAlign:'center'}}><h3>画面左のノード（青い点）をクリックで<br/>選択してください</h3><br/><a>サンプルの自動車の競合情報を確認できます。</a></h2>
+        </>
       }
     </Card>
   );
