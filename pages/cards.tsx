@@ -38,7 +38,7 @@ const MediaControlCard = (props: PropsOptional) => {
   }, [picked])
 
   useMemo(() => {
-    const filePath = '/static/images/image' + picked +'.jpg';
+    const filePath = '/static/images/' + picked +'.jpg';
     setImage(filePath);
   }, [picked])
   
@@ -51,7 +51,6 @@ const MediaControlCard = (props: PropsOptional) => {
               component="img"
               sx={{ width: 250 }}
               image={image}
-              alt="Live from space album cover"
             />
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flex: '1 0 auto', backgroundColor:'white', width:'100%', height:'100%' }}>

@@ -54,7 +54,7 @@ function Apps() {
           <MediaControlCard picked={card} />
           <h2 style={{color:"#1e90ff", paddingTop:'2.5ch', margin:"1ch", textAlign:"center", fontSize:'30px'}}>競合分析</h2>
           <div style={{ marginRight:'5ch' }}>
-          <DataTable/>
+          <DataTable picked={card} />
           </div>
        </div>
     </div>

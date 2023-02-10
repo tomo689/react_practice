@@ -16,23 +16,30 @@ export type Table = {
   price: number,
 }
 
+export type Props = {
+  picked: string
+}
+
 function createData(
+  id: string,
   name: string,
   design: number,
   technology: number,
   safety: number,
   price: number,
 ) {
-  return { name, design, technology, safety, price };
+  return { id, name, design, technology, safety, price };
 }
 
-export default function DataTable() {
+export default function DataTable(props:Props) {
+  const {picked} = props
   const [rows, setRows] = useState<Array<Table>>([]);
 
   useEffect(() => {
     const data = jsonReader()[0]['company'];
     const companies = Object.keys(data);
     const rows = companies.map((d) => createData(
+        data[d],
         data[d].name,
         data[d].reputation[0],
         data[d].reputation[1],
